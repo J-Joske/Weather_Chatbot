@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather ChatBot</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .chat-container {
+            width: 60%;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .chat-box {
+            height: 400px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        .user-message, .bot-message {
+            margin: 5px 0;
+        }
+        .user-message {
+            text-align: right;
+        }
+        .bot-message {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+<div class="chat-container">
+    <h3>ChatBot</h3>
+    <div class="chat-box" id="chat-box">
+        <!-- Chat messages will appear here -->
+    </div>
+    <div class="input-group mt-3">
+        <input type="text" id="user-input" class="form-control" placeholder="Type your message" autocomplete="off">
+        <div class="input-group-append">
+            <button class="btn btn-primary" type="button" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    function sendMessage() {
+        var userInput = $('#user-input').val();
+        if (userInput.trim() !== "") {
+            $('#chat-box').append('<div class="user-message"><strong>You:</strong> ' + userInput + '</div>');
+            $('#user-input').val('');  // Clear input field
+
+            $.ajax({
+                url: "/get_response",
+                type: "POST",
+                contentType: "application/json",
+                data: JSON.stringify({message: userInput}),
+                success: function(response) {
+                    $('#chat-box').append('<div class="bot-message"><strong>Bot:</strong> ' + response.response + '</div>');
+                    $('#chat-box').scrollTop($('#chat-box')[0].scrollHeight);  // Scroll to bottom
+                }
+            });
+        }
+    }
+</script>
+
+</body>
+</html>
