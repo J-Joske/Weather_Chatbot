@@ -34,7 +34,7 @@
 <body>
 
 <div class="chat-container">
-    <h3>ChatBot</h3>
+    <h3>Misty The Weatherbot</h3>
     <div class="chat-box" id="chat-box">
         <!-- Chat messages will appear here -->
     </div>
@@ -60,7 +60,7 @@
                 contentType: "application/json",
                 data: JSON.stringify({message: userInput}),
                 success: function(response) {
-                    $('#chat-box').append('<div class="bot-message"><strong>Bot:</strong> ' + response.response + '</div>');
+                    $('#chat-box').append('<div class="bot-message"><strong>Misty:</strong> ' + response.response + '</div>');
                     $('#chat-box').scrollTop($('#chat-box')[0].scrollHeight);  // Scroll to bottom
                 }
             });
