@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc993971-747a-4ee4-9a88-afee5a7f5774" name="Changes" comment="Chatbot update to provide reponse if it doesn't know how to answer">
-      <change afterPath="$PROJECT_DIR$/static/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weather_api_key.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weather_corpus.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weather_data.py" afterDir="false" />
+    <list default="true" id="cc993971-747a-4ee4-9a88-afee5a7f5774" name="Changes" comment="weather api and database, chatbot responses">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chatbot.py" beforeDir="false" afterPath="$PROJECT_DIR$/chatbot.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,12 +98,21 @@
       <option name="project" value="LOCAL" />
       <updated>1726125982820</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="weather api and database, chatbot responses">
+      <option name="closed" value="true" />
+      <created>1726466371941</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1726466371941</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Chatbot update to provide reponse if it doesn't know how to answer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chatbot update to provide reponse if it doesn't know how to answer" />
+    <MESSAGE value="weather api and database, chatbot responses" />
+    <option name="LAST_COMMIT_MESSAGE" value="weather api and database, chatbot responses" />
   </component>
 </project>

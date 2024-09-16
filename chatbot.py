@@ -2,8 +2,15 @@ from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer, ListTrainer
 import yaml
 
-# Create a new chatbot instance
-chatbot = ChatBot(name='Misty')
+# New chatbot
+chatbot = ChatBot(
+    name='Misty',
+    logic_adapters=[
+        'chatterbot.logic.BestMatch',
+        'chatterbot.logic.TimeLogicAdapter',
+        'chatterbot.logic.MathematicalEvaluation',
+    ]
+)
 
 # Train the bot with the English corpus
 corpus_trainer = ChatterBotCorpusTrainer(chatbot)
