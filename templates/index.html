@@ -3,38 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather ChatBot</title>
+    <title>WeatherBot</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .chat-container {
-            width: 60%;
-            margin: 20px auto;
-            border: 1px solid #ccc;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .chat-box {
-            height: 400px;
-            overflow-y: auto;
-            border: 1px solid #ccc;
-            padding: 10px;
-        }
-        .user-message, .bot-message {
-            margin: 5px 0;
-        }
-        .user-message {
-            text-align: right;
-        }
-        .bot-message {
-            text-align: left;
-        }
-    </style>
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
 </head>
 <body>
 
 <div class="chat-container">
-    <h3>Misty The Weatherbot</h3>
+    <h3>Misty the Weather chatbot</h3>
     <div class="chat-box" id="chat-box">
         <!-- Chat messages will appear here -->
     </div>
@@ -48,6 +24,14 @@
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script>
+    // Trigger the button click when "Enter" key is pressed
+    document.getElementById("user-input").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault(); // Prevent form submission if needed
+            sendMessage(); // Trigger the sendMessage function
+        }
+    });
+
     function sendMessage() {
         var userInput = $('#user-input').val();
         if (userInput.trim() !== "") {
