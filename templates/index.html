@@ -44,7 +44,8 @@
                 contentType: "application/json",
                 data: JSON.stringify({message: userInput}),
                 success: function(response) {
-                    $('#chat-box').append('<div class="bot-message"><strong>Misty:</strong> ' + response.response + '</div>');
+                    $('#chat-box').append('<div class="bot-message"><strong>Misty:</strong> ' + response.response +
+                    '</div>');
                     $('#chat-box').scrollTop($('#chat-box')[0].scrollHeight);  // Scroll to bottom
                 }
             });

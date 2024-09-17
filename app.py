@@ -35,10 +35,6 @@ def get_response():
 
 
 def format_weather_response(response_text):
-    """
-    Formats a long response into multiple HTML paragraphs, specifically for weather forecasts and recommendations.
-    Handles both weather-related and non-weather-related responses.
-    """
     if '📅 Date:' in response_text or '📝 Recommendations' in response_text:
         # Split the response at each forecast (before the '📅 Date:' marker) and the recommendation section ('📝 Recommendations')
         weather_parts = re.split(r'(📅 Date:)', response_text)
@@ -68,7 +64,7 @@ def format_weather_response(response_text):
 
 
 
-# Call the function to update the weather data (this can be done once when the app starts)
+# Call the function to update the weather data
 update_weather_data()
 
 if __name__ == "__main__":
