@@ -1,17 +1,17 @@
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer, ListTrainer
 import yaml
+from weather_logic_adapter import WeatherLogicAdapter  # Import the custom logic adapter
 
-# New chatbot
+# Create a new chatbot instance with logic adapters
 chatbot = ChatBot(
     name='Misty',
     logic_adapters=[
+        'weather_logic_adapter.WeatherLogicAdapter',
         'chatterbot.logic.BestMatch',
         'chatterbot.logic.TimeLogicAdapter',
-        'chatterbot.logic.MathematicalEvaluation',
     ]
 )
-
 # Train the bot with the English corpus
 corpus_trainer = ChatterBotCorpusTrainer(chatbot)
 corpus_trainer.train('chatterbot.corpus.english')
