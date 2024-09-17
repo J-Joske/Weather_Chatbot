@@ -72,6 +72,7 @@ def save_to_database(forecast_data):
     conn.commit()
     conn.close()
 
+
 # Define cities with lat and lon directly
 def load_cities():
     cities = [

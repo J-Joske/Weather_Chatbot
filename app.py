@@ -37,28 +37,35 @@ def get_response():
 def format_weather_response(response_text):
     """
     Formats a long response into multiple HTML paragraphs, specifically for weather forecasts and recommendations.
+    Handles both weather-related and non-weather-related responses.
     """
-    # Split the response at each forecast (before the '📅 Date:' marker) and the recommendation section ('📝 Recommendations')
-    weather_parts = re.split(r'(📅 Date:)', response_text)
+    if '📅 Date:' in response_text or '📝 Recommendations' in response_text:
+        # Split the response at each forecast (before the '📅 Date:' marker) and the recommendation section ('📝 Recommendations')
+        weather_parts = re.split(r'(📅 Date:)', response_text)
 
-    paragraphs = []
+        paragraphs = []
 
-    # Re-add the '📅 Date:' marker to the start of each forecast, and wrap each in <p> tags
-    for i in range(1, len(weather_parts), 2):
-        date_marker = weather_parts[i]
-        forecast = weather_parts[i + 1]
-        paragraphs.append(f"<p>{date_marker}{forecast.strip()}</p>")
+        # Re-add the '📅 Date:' marker to the start of each forecast, and wrap each in <p> tags
+        for i in range(1, len(weather_parts), 2):
+            date_marker = weather_parts[i]
+            forecast = weather_parts[i + 1]
+            paragraphs.append(f"<p>{date_marker}{forecast.strip()}</p>")
 
-    # Handle the recommendations part if present (starts with '📝 Recommendations')
-    recommendation_split = response_text.split('📝 Recommendations')
+        # Handle the recommendations part if present (starts with '📝 Recommendations')
+        recommendation_split = response_text.split('📝 Recommendations')
 
-    if len(recommendation_split) > 1:
-        recommendation_text = recommendation_split[1].strip()
-        paragraphs.append(f"<p>📝 Recommendations{recommendation_text}</p>")
+        if len(recommendation_split) > 1:
+            recommendation_text = recommendation_split[1].strip()
+            paragraphs.append(f"<p>📝 Recommendations{recommendation_text}</p>")
 
-    # Join all the paragraphs into a single formatted response
-    formatted_response = ''.join(paragraphs)
+        # Join all the paragraphs into a single formatted response
+        formatted_response = ''.join(paragraphs)
+    else:
+        # If it's not a weather-related response, just wrap the entire response in a <p> tag
+        formatted_response = f"<p>{response_text}</p>"
+
     return formatted_response
+
 
 
 # Call the function to update the weather data (this can be done once when the app starts)
