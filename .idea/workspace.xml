@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc993971-747a-4ee4-9a88-afee5a7f5774" name="Changes" comment="weather api and database, chatbot responses">
-      <change afterPath="$PROJECT_DIR$/weather_logic_adapter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatbot.py" beforeDir="false" afterPath="$PROJECT_DIR$/chatbot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-    </list>
+    <list default="true" id="cc993971-747a-4ee4-9a88-afee5a7f5774" name="Changes" comment="fixed confidence logic problem with custom logic adapter" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,13 +111,22 @@
       <option name="project" value="LOCAL" />
       <updated>1726467469291</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fixed confidence logic problem with custom logic adapter">
+      <option name="closed" value="true" />
+      <created>1726536978378</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1726536978378</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Chatbot update to provide reponse if it doesn't know how to answer" />
     <MESSAGE value="weather api and database, chatbot responses" />
-    <option name="LAST_COMMIT_MESSAGE" value="weather api and database, chatbot responses" />
+    <MESSAGE value="fixed confidence logic problem with custom logic adapter" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed confidence logic problem with custom logic adapter" />
   </component>
 </project>
