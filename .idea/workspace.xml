@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc993971-747a-4ee4-9a88-afee5a7f5774" name="Changes" comment="fixed confidence logic problem with custom logic adapter" />
+    <list default="true" id="cc993971-747a-4ee4-9a88-afee5a7f5774" name="Changes" comment="fixed confidence logic problem with custom logic adapter">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather.db" beforeDir="false" afterPath="$PROJECT_DIR$/weather.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_logic_adapter.py" beforeDir="false" afterPath="$PROJECT_DIR$/weather_logic_adapter.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -119,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726536978378</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fixed confidence logic problem with custom logic adapter">
+      <option name="closed" value="true" />
+      <created>1726549657971</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1726549657971</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
